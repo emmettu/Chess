@@ -13,7 +13,7 @@ public class Pawn extends Piece{
 
     boolean hasBeenMoved = false;
 
-    Pawn(Board board, int color) {
+    public Pawn(Board board, int color) {
         super(board, color);
     }
 

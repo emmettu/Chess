@@ -2,14 +2,15 @@ package com.emmett.main.model;
 
 import com.emmett.main.model.pieces.Piece;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by emmett on 07/08/15.
  */
 public class Board {
-    public List<Piece> whitePieces;
-    public List<Piece> blackPieces;
+    public List<Piece> whitePieces = new ArrayList<Piece>();
+    public List<Piece> blackPieces = new ArrayList<Piece>();
 
     public boolean contains(Position p) {
         return (0 <= p.x) && (p.x < 8) && (0 <= p.y) && (p.y < 8);

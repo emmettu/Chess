@@ -1,7 +1,7 @@
-package com.emmett.model.pieces;
+package com.emmett.main.model.pieces;
 
-import com.emmett.model.Board;
-import com.emmett.model.Position;
+import com.emmett.main.model.Board;
+import com.emmett.main.model.Position;
 
 import java.util.List;
 
@@ -10,19 +10,27 @@ import java.util.List;
  */
 public abstract class Piece {
 
-     private Board board;
      private List<Position> possiblePositions;
      public Position currentPosition;
+     public int color;
+     protected Board board;
 
-     Piece(Board board) {
+     Piece(Board board, int color) {
           this.board = board;
+          this.color = color;
      }
 
      public List<Position> getPossiblePositions() {
           return possiblePositions;
      }
+
      public void loadPossiblePositions() {
           possiblePositions = generatePossiblePositions();
      }
+
      protected abstract List<Position> generatePossiblePositions();
+
+     public void move(Position p) {
+          currentPosition = p;
+     }
 }

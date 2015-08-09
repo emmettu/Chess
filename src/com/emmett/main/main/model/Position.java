@@ -1,4 +1,4 @@
-package com.emmett.main.model;
+package com.emmett.main.main.model;
 
 /**
  * Created by emmett on 07/08/15.

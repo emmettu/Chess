@@ -1,4 +1,4 @@
-package com.emmett.main;
+package com.emmett.main.main;
 
 public class Main {
 

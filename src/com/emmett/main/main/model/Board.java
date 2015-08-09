@@ -1,6 +1,6 @@
-package com.emmett.main.model;
+package com.emmett.main.main.model;
 
-import com.emmett.main.model.pieces.Piece;
+import com.emmett.main.main.model.pieces.Piece;
 
 import java.util.ArrayList;
 import java.util.List;

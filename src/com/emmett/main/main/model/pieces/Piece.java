@@ -1,8 +1,8 @@
-package com.emmett.main.model.pieces;
+package com.emmett.main.main.model.pieces;
 
-import com.emmett.main.model.Board;
-import com.emmett.main.model.Color;
-import com.emmett.main.model.Position;
+import com.emmett.main.main.model.Board;
+import com.emmett.main.main.model.Color;
+import com.emmett.main.main.model.Position;
 
 import java.util.List;
 

@@ -1,10 +1,10 @@
-package com.emmett.main.test.model;
+package com.emmett.chess.test.model;
 
-import com.emmett.main.main.model.Board;
-import com.emmett.main.main.model.Color;
-import com.emmett.main.main.model.Position;
-import com.emmett.main.main.model.pieces.Pawn;
-import com.emmett.main.main.model.pieces.Piece;
+import com.emmett.chess.main.model.Board;
+import com.emmett.chess.main.model.Color;
+import com.emmett.chess.main.model.Position;
+import com.emmett.chess.main.model.pieces.Pawn;
+import com.emmett.chess.main.model.pieces.Piece;
 import org.junit.Before;
 import org.junit.Test;
 

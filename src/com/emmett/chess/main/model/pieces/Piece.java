@@ -1,8 +1,8 @@
-package com.emmett.main.main.model.pieces;
+package com.emmett.chess.main.model.pieces;
 
-import com.emmett.main.main.model.Board;
-import com.emmett.main.main.model.Color;
-import com.emmett.main.main.model.Position;
+import com.emmett.chess.main.model.Board;
+import com.emmett.chess.main.model.Color;
+import com.emmett.chess.main.model.Position;
 
 import java.util.List;
 
@@ -37,7 +37,12 @@ public abstract class Piece {
 
     protected abstract List<Position> generatePossiblePositions();
 
-    public void move(Position p) {
+    public void move(Position p) throws IllegalArgumentException {
+        loadPossiblePositions();
+        if(!possiblePositions.contains(p)) {
+            throw new IllegalArgumentException();
+        }
+        board.removePieceAt(p);
         currentPosition = p;
     }
 }

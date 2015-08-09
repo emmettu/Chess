@@ -1,6 +1,6 @@
-package com.emmett.main.main.model;
+package com.emmett.chess.main.model;
 
-import com.emmett.main.main.model.pieces.Piece;
+import com.emmett.chess.main.model.pieces.Piece;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,5 +39,19 @@ public class Board {
             }
         }
         return false;
+    }
+    public void removePieceAt(Position p) {
+        for(Piece piece : whitePieces) {
+            if(piece.currentPosition.equals(p)) {
+                whitePieces.remove(piece);
+                return;
+            }
+        }
+        for(Piece piece : blackPieces) {
+            if(piece.currentPosition.equals(p)) {
+                blackPieces.remove(piece);
+                return;
+            }
+        }
     }
 }

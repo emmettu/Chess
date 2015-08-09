@@ -1,7 +1,7 @@
-package com.emmett.main.main.model.pieces;
+package com.emmett.chess.main.model.pieces;
 
-import com.emmett.main.main.model.Board;
-import com.emmett.main.main.model.Position;
+import com.emmett.chess.main.model.Board;
+import com.emmett.chess.main.model.Position;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +42,7 @@ public class Pawn extends Piece{
                 currentPosition.y + color
         );
         if(validStraightMove(straight)) {
-            positions.add(currentPosition);
+            positions.add(straight);
         }
 
         Position doubleStraight = new Position(
@@ -63,7 +63,7 @@ public class Pawn extends Piece{
     }
     @Override
     public void move(Position p) {
+        super.move(p);
         this.hasBeenMoved = true;
-        currentPosition = p;
     }
 }

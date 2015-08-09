@@ -1,4 +1,4 @@
-package com.emmett.main.main;
+package com.emmett.chess.main;
 
 public class Main {
 

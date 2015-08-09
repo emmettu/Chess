@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Rook extends Piece{
 
-    Rook(Board board, int color) {
+    public Rook(Board board, int color) {
         super(board, color);
     }
 

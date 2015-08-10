@@ -22,10 +22,10 @@ public class BoardTest {
     public void setUp() {
         board = new Board();
         whitePiece = new Pawn(board, Color.WHITE);
-        whitePiece.move(new Position(3, 3));
+        whitePiece.currentPosition = new Position(3, 3);
 
         blackPiece = new Pawn(board, Color.BLACK);
-        blackPiece.move(new Position(4, 4));
+        blackPiece.currentPosition = new Position(4, 4);
     }
 
     @Test

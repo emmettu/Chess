@@ -40,7 +40,7 @@ public abstract class Piece {
     public void move(Position p) throws IllegalArgumentException {
         loadPossiblePositions();
         if(!possiblePositions.contains(p)) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Invalid move.");
         }
         board.removePieceAt(p);
         currentPosition = p;

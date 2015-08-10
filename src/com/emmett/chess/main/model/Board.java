@@ -40,18 +40,18 @@ public class Board {
         }
         return false;
     }
-    public void removePieceAt(Position p) {
+
+    public Piece getPieceAt(Position p) {
         for(Piece piece : whitePieces) {
             if(piece.currentPosition.equals(p)) {
-                whitePieces.remove(piece);
-                return;
+                return piece;
             }
         }
         for(Piece piece : blackPieces) {
             if(piece.currentPosition.equals(p)) {
-                blackPieces.remove(piece);
-                return;
+                return piece;
             }
         }
+        return null;
     }
 }

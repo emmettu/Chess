@@ -4,18 +4,19 @@ import com.emmett.chess.main.model.PieceFactory;
 import com.emmett.chess.main.model.Position;
 import com.emmett.chess.main.model.pieces.Piece;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by emmett on 10/08/15.
  */
 public class ChessBoard extends Board {
-    List<Piece> pawnList;
-    List<Piece> knightList;
-    List<Piece> bishopList;
-    List<Piece> rookList;
-    List<Piece> kingList;
-    List<Piece> queenList;
+    public List<Piece> pawnList = new ArrayList<>();
+    public List<Piece> knightList = new ArrayList<>();
+    public List<Piece> bishopList = new ArrayList<>();
+    public List<Piece> rookList = new ArrayList<>();
+    public List<Piece> kingList = new ArrayList<>();
+    public List<Piece> queenList = new ArrayList<>();
 
     PieceFactory placer = new PieceFactory(this);
 

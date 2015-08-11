@@ -11,7 +11,7 @@ import java.util.List;
  * Created by emmett on 10/08/15.
  */
 public class Queen extends Piece{
-    Queen(Board board, int color) {
+    public Queen(Board board, int color) {
         super(board, color);
     }
 

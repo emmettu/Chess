@@ -5,4 +5,5 @@ package com.emmett.chess.main.view;
  */
 public interface View {
     void render();
+    void update();
 }

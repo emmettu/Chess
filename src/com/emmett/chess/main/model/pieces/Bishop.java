@@ -10,7 +10,7 @@ import java.util.List;
  * Created by emmett on 10/08/15.
  */
 public class Bishop extends Piece {
-    Bishop(Board board, int color) {
+    public Bishop(Board board, int color) {
         super(board, color);
     }
 

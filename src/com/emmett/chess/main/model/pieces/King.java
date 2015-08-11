@@ -10,7 +10,7 @@ import java.util.List;
  * Created by emmett on 10/08/15.
  */
 public class King extends Piece {
-    King(Board board, int color) {
+    public King(Board board, int color) {
         super(board, color);
     }
 

@@ -1,7 +1,7 @@
 package com.emmett.chess.main.model.pieces;
 
-import com.emmett.chess.main.model.Board;
-import com.emmett.chess.main.model.Color;
+import com.emmett.chess.main.model.boards.Board;
+import com.emmett.chess.main.model.util.Color;
 import com.emmett.chess.main.model.Position;
 
 import java.util.List;

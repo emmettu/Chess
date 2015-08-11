@@ -1,6 +1,6 @@
 package com.emmett.chess.main.model.util;
 
-import com.emmett.chess.main.model.Board;
+import com.emmett.chess.main.model.boards.Board;
 import com.emmett.chess.main.model.Position;
 
 import java.util.ArrayList;

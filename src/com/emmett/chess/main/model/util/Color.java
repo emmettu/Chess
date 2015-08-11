@@ -1,4 +1,4 @@
-package com.emmett.chess.main.model;
+package com.emmett.chess.main.model.util;
 
 /**
  * Created by emmett on 07/08/15.

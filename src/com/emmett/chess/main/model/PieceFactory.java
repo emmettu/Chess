@@ -1,6 +1,8 @@
 package com.emmett.chess.main.model;
 
+import com.emmett.chess.main.model.boards.Board;
 import com.emmett.chess.main.model.pieces.*;
+import com.emmett.chess.main.model.util.Color;
 
 /**
  * Created by emmett on 10/08/15.
@@ -12,55 +14,67 @@ public class PieceFactory {
         this.board = board;
     }
 
-    public void placeWhitePawn(Position position) {
+    public Piece placeWhitePawn(Position position) {
         Piece pawn = new Pawn(board, Color.WHITE);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeBlackPawn(Position position) {
+    public Piece placeBlackPawn(Position position) {
         Piece pawn = new Pawn(board, Color.BLACK);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeWhiteKnight(Position position) {
+    public Piece placeWhiteKnight(Position position) {
         Piece pawn = new Knight(board, Color.WHITE);
         pawn.currentPosition = position;
+        return pawn;
     }
 
-    public void placeBlackKnight(Position position) {
+    public Piece placeBlackKnight(Position position) {
         Piece pawn = new Knight(board, Color.BLACK);
         pawn.currentPosition = position;
+        return pawn;
     }
 
-    public void placeWhiteBishop(Position position) {
+    public Piece placeWhiteBishop(Position position) {
         Piece pawn = new Bishop(board, Color.WHITE);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeBlackBishop(Position position) {
+    public Piece placeBlackBishop(Position position) {
         Piece pawn = new Bishop(board, Color.BLACK);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeWhiteRook(Position position) {
+    public Piece placeWhiteRook(Position position) {
         Piece pawn = new Rook(board, Color.WHITE);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeBlackRook(Position position) {
+    public Piece placeBlackRook(Position position) {
         Piece pawn = new Rook(board, Color.BLACK);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeWhiteQueen(Position position) {
+    public Piece placeWhiteQueen(Position position) {
         Piece pawn = new Queen(board, Color.WHITE);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeBlackQueen(Position position) {
+    public Piece placeBlackQueen(Position position) {
         Piece pawn = new Queen(board, Color.BLACK);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeWhiteKing(Position position) {
+    public Piece placeWhiteKing(Position position) {
         Piece pawn = new King(board, Color.WHITE);
         pawn.currentPosition = position;
+        return pawn;
     }
-    public void placeBlackKing(Position position) {
+    public Piece placeBlackKing(Position position) {
         Piece pawn = new King(board, Color.BLACK);
         pawn.currentPosition = position;
+        return pawn;
     }
 
 }

@@ -30,6 +30,7 @@ public class ConsoleBoardRenderer implements View {
     public void update() {
         initializeArray();
         loadPieces();
+        render();
     }
 
     private void initializeArray() {
@@ -110,9 +111,9 @@ public class ConsoleBoardRenderer implements View {
 
     private boolean isWhite(int x, int y) {
         if((x+y) % 2 == 0) {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -121,8 +122,8 @@ public class ConsoleBoardRenderer implements View {
     }
 
     private void printBoard() {
-        for(int y = 0; y < BOARD_SIZE; y++) {
-            System.out.print(8 - y);
+        for(int y = BOARD_SIZE - 1; y >= 0; y--) {
+            System.out.print(y + 1);
             for(int x = 0; x < BOARD_SIZE; x++) {
                 System.out.print(representation[x][y]);
             }

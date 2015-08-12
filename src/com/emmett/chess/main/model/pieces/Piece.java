@@ -44,6 +44,8 @@ public abstract class Piece {
         }
         currentPosition = p;
         captureAtNewPosition();
+
+        board.renderer.update();
     }
     public void captureAtNewPosition() {
         Piece enemy = board.getPieceAt(currentPosition);

@@ -3,6 +3,7 @@ package com.emmett.chess.main.model.boards;
 import com.emmett.chess.main.model.util.Color;
 import com.emmett.chess.main.model.Position;
 import com.emmett.chess.main.model.pieces.Piece;
+import com.emmett.chess.main.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 public class Board {
     public List<Piece> whitePieces = new ArrayList<Piece>();
     public List<Piece> blackPieces = new ArrayList<Piece>();
+    public View renderer;
 
     public boolean contains(Position p) {
         return (0 <= p.x) && (p.x < 8) && (0 <= p.y) && (p.y < 8);

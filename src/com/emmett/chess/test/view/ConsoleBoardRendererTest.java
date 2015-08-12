@@ -2,6 +2,7 @@ package com.emmett.chess.test.view;
 
 import com.emmett.chess.main.model.boards.ChessBoard;
 import com.emmett.chess.main.view.ConsoleBoardRenderer;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -11,6 +12,7 @@ import static org.junit.Assert.*;
  */
 public class ConsoleBoardRendererTest {
     @Test
+    @Ignore
     public void testPrint() {
         ConsoleBoardRenderer renderer = new ConsoleBoardRenderer(new ChessBoard());
         renderer.update();

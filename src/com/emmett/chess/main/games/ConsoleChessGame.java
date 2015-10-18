@@ -32,17 +32,29 @@ public class ConsoleChessGame {
         prompt2.player = player2;
 
         board.renderer.update();
-        while(true) {
-            doMoves();
-        }
+        doMoves();
     }
 
     private void doMoves() {
-        doMove(player1);
-        doMove(player2);
+        while(true) {
+            playerMove(player1);
+            playerMove(player2);
+        }
     }
 
-    private void doMove(Player player) {
+    private void playerMove(Player player) {
+        while(true) {
+            try {
+                promptPlayer(player);
+                return;
+            }
+            catch(IllegalArgumentException e) {
+                System.out.println("No.");
+            }
+        }
+    }
+
+    private void promptPlayer(Player player) {
         List<Position> move = player.getMove();
         Piece piece = board.getPieceAt(move.get(0));
 
@@ -51,8 +63,7 @@ public class ConsoleChessGame {
             turn *= -1;
         }
         else {
-            System.out.println("You can't do that!");
+            throw new IllegalArgumentException("Dude no.");
         }
-
     }
 }

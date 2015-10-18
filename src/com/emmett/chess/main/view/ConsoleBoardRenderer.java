@@ -2,8 +2,11 @@ package com.emmett.chess.main.view;
 
 import com.emmett.chess.main.model.Position;
 import com.emmett.chess.main.model.boards.ChessBoard;
-import com.emmett.chess.main.model.pieces.Piece;
+import com.emmett.chess.main.model.pieces.*;
 import com.emmett.chess.main.model.util.Color;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by emmett on 10/08/15.
@@ -49,23 +52,28 @@ public class ConsoleBoardRenderer implements View {
     }
 
     private void loadPieces() {
-        for(Piece piece : board.pawnList) {
-            setRepresentation(piece, "p");
-        }
-        for(Piece piece : board.knightList) {
-            setRepresentation(piece, "k");
-        }
-        for(Piece piece : board.bishopList) {
-            setRepresentation(piece, "B");
-        }
-        for(Piece piece : board.rookList) {
-            setRepresentation(piece, "R");
-        }
-        for(Piece piece : board.queenList) {
-            setRepresentation(piece, "Q");
-        }
-        for(Piece piece : board.kingList) {
-            setRepresentation(piece, "K");
+        List<Piece> pieces = new ArrayList<>();
+        pieces.addAll(board.whitePieces);
+        pieces.addAll(board.blackPieces);
+        for(Piece piece : pieces) {
+            if(piece instanceof Pawn) {
+                setRepresentation(piece, "p");
+            }
+            if(piece instanceof Knight) {
+                setRepresentation(piece, "k");
+            }
+            if(piece instanceof Bishop) {
+                setRepresentation(piece, "b");
+            }
+            if(piece instanceof Rook) {
+                setRepresentation(piece, "r");
+            }
+            if(piece instanceof Queen) {
+                setRepresentation(piece, "Q");
+            }
+            if(piece instanceof King) {
+                setRepresentation(piece, "K");
+            }
         }
     }
 

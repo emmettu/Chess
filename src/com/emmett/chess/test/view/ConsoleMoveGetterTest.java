@@ -1,6 +1,7 @@
 package com.emmett.chess.test.view;
 
 import com.emmett.chess.main.model.players.HumanPlayer;
+import com.emmett.chess.main.model.util.Color;
 import com.emmett.chess.main.view.ConsoleMoveGetter;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -16,7 +17,7 @@ public class ConsoleMoveGetterTest {
     @Ignore
     public void testParseInput() {
         ConsoleMoveGetter getter = new ConsoleMoveGetter();
-        HumanPlayer player = new HumanPlayer();
+        HumanPlayer player = new HumanPlayer(Color.WHITE);
         player.moveGetter = getter;
         getter.player = player;
 

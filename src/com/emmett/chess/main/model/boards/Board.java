@@ -31,8 +31,9 @@ public class Board {
     }
 
     public boolean anyOccupied(Position p) {
-        List<Piece> pieces = whitePieces;
+        List<Piece> pieces = new ArrayList<>();
         pieces.addAll(blackPieces);
+        pieces.addAll(whitePieces);
         return doAnyPiecesOccupy(pieces, p);
     }
 

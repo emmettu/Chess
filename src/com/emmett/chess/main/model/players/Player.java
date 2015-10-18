@@ -7,6 +7,14 @@ import java.util.List;
 /**
  * Created by emmett on 11/08/15.
  */
-public interface Player {
-    List<Position> getMove();
+public abstract class Player {
+
+    public int color;
+
+    public Player(int color) {
+        this.color = color;
+    }
+
+    public abstract List<Position> getMove();
+
 }

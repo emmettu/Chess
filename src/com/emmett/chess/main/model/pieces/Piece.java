@@ -42,13 +42,13 @@ public abstract class Piece {
         if(!possiblePositions.contains(p)) {
             throw new IllegalArgumentException("Invalid move.");
         }
+        captureAtNewPosition(p);
         currentPosition = p;
-        captureAtNewPosition();
 
         board.renderer.update();
     }
-    public void captureAtNewPosition() {
-        Piece enemy = board.getPieceAt(currentPosition);
+    public void captureAtNewPosition(Position p) {
+        Piece enemy = board.getPieceAt(p);
         List<Piece> pieces =
                 color == Color.WHITE ? board.blackPieces : board.whitePieces;
         pieces.remove(enemy);

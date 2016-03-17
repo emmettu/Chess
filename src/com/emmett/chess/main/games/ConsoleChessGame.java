@@ -49,7 +49,7 @@ public class ConsoleChessGame {
                 return;
             }
             catch(IllegalArgumentException e) {
-                System.out.println("No.");
+                System.out.println(e.getMessage());
             }
         }
     }
@@ -57,6 +57,9 @@ public class ConsoleChessGame {
     private void promptPlayer(Player player) {
         List<Position> move = player.getMove();
         Piece piece = board.getPieceAt(move.get(0));
+        if (piece == null) {
+            throw new IllegalArgumentException("No piece there");
+        }
 
         if(turn == player.color && piece.color == player.color) {
             piece.move(move.get(1));

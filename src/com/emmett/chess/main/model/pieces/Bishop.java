@@ -18,4 +18,5 @@ public class Bishop extends Piece {
     protected List<Position> generatePossiblePositions() {
         return new MovesUtil(board, currentPosition, color).getAllDiagonals();
     }
+
 }

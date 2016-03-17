@@ -48,15 +48,17 @@ public class MovesUtil {
                 position.x + x,
                 position.y + y
         );
-        for(int i = 2; board.contains(newPosition) && !board.friendlyOccupied(newPosition, color); i++) {
+        for (int i = 2; board.contains(newPosition) && !board.friendlyOccupied(newPosition, color); i++) {
             positions.add(newPosition);
+
+            if(board.enemyOccupied(newPosition, color)) {
+                break;
+            }
+
             newPosition = new Position(
                     position.x + i*x,
                     position.y + i*y
             );
-        }
-        if(board.enemyOccupied(newPosition, color)) {
-            positions.add(newPosition);
         }
         return positions;
     }
